@@ -5,6 +5,7 @@ html
     link(rel='stylesheet', type='text/css', href='/css/bootstrap.css')
     link(rel='stylesheet', type='text/css', href='/css/style.css')
     link(rel="icon", sizes="32x32", type="image/png", href="/img/favicon.png")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   body
     nav.navbar.navbar-default.navbar-fixed-top
       .container-fluid
@@ -33,9 +34,9 @@ html
               a(href='/memory-leaks') Memory Leaks
     .row.main-content
       block content
-    script(src='/js/jquery.js')
-    script(src='/js/bootstrap.js')
-    script(src='/js/lodash.js')
-    if scripts
-      each script in scripts
-        script(src='/js/' + script)
+      script(src='/js/jquery.js')
+      script(src='/js/bootstrap.js')
+      script(src='/js/lodash.js')
+      if scripts
+        each script in scripts
+          script(src='/js/' + script)
