@@ -32,11 +32,12 @@ html
               a(href='/page-jank') Page Jank
             li
               a(href='/memory-leaks') Memory Leaks
-    .row.main-content
-      block content
-      script(src='/js/jquery.js')
-      script(src='/js/bootstrap.js')
-      script(src='/js/lodash.js')
-      if scripts
-        each script in scripts
-          script(src='/js/' + script)
+    .container
+      .row.main-content
+        block content
+        script(src='/js/jquery.js')
+        script(src='/js/bootstrap.js')
+        script(src='/js/lodash.js')
+        if scripts
+          each script in scripts
+            script(src='/js/' + script)
